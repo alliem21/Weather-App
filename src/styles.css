@@ -1,24 +1,31 @@
 body {
   background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%);
 }
-
 .form-inline {
   font-family: "Saira Semi Condensed", sans-serif;
   padding-top: 30px;
 }
-h1 {
+.city {
+  font-size: 70px;
   font-family: "Saira Semi Condensed", sans-serif;
-  padding-top: 40px;
-  padding-bottom: 15px;
-  padding-left: 40px;
+  margin: 10px 0px 8px;
+  position: relative;
+  right: -50px;
+  bottom: -10px;
+  text-align: center;
 }
 .date {
   font-family: "Saira Semi Condensed", sans-serif;
-  padding-top: 40px;
+  position: relative;
+  right: -50px;
+  bottom: -50px;
+  text-align: center;
 }
 h3 {
   font-family: "Saira Semi Condensed", sans-serif;
-  padding-top: 0;
+  position: relative;
+  text-align: center;
+  bottom: -55px;
 }
 hr {
   width: 100%;
@@ -28,11 +35,7 @@ li {
   font-size: 18px;
   margin: 25px 0;
 }
-.future {
-  font-family: "Saira Semi Condensed", sans-serif;
-  padding-top: 70px;
-  width: max-content;
-}
+
 .details {
   font-family: "Saira Semi Condensed", sans-serif;
   text-align: center;
@@ -49,21 +52,14 @@ li {
   font-family: "Saira Semi Condensed", sans-serif;
   font-size: 50px;
 }
-.fa-sun {
-  font-family: "Saira Semi Condensed", sans-serif;
-  color: #fbc02d;
-  font-size: 50px;
-}
+
 .now {
   position: relative;
   left: 20px;
   top: 10px;
-  font-size: 50px;
+  font-size: 60px;
 }
-.five {
-  width: max-content;
-  font-size: 30px;
-}
+
 .list {
   position: relative;
   right: 30px;
@@ -77,12 +73,15 @@ li {
   left: 20px;
   font-size: 20px;
 }
-.sunny {
-  color: black;
-  font-size: 20px;
-}
+
 .opensource {
   text-align: center;
+}
+
+.units {
+  position: relative;
+  font-size: 40px;
+  left: 15px;
 }
 
 .units .active {
@@ -92,4 +91,9 @@ li {
 
 .units .active:hover {
   text-decoration: none;
+}
+
+#icon {
+  width: 40%;
+  height: auto;
 }

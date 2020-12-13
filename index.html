@@ -24,7 +24,7 @@
   <body>
     <div class="container">
       <div class="row">
-        <div class="col-8">
+        <div class="col-12">
           <form class="form-inline">
             <div class="form-group mb-2">
               <input
@@ -47,14 +47,17 @@
             <div class="card">
               <div class="card-body">
                 <div class="row">
-                  <div class="col-6">
-                    <h1 class="city">Austin, TX</h1>
+                  <div class="col-4">
+                    <h1 class="city">Austin</h1>
                   </div>
-                  <div class="col-6">
-                    <h2 class="date" id="current-date-today">
-                      October 25, 2020
-                    </h2>
-                    <br />
+                  <div class="col-4">
+                    <div class="day">
+                      <h2 class="date" id="current-date-today">
+                        October 25, 2020
+                      </h2>
+                    </div>
+                  </div>
+                  <div class="col-4">
                     <h3 id="current-date">Sunday</h3>
                   </div>
                 </div>
@@ -65,7 +68,7 @@
             <div class="card">
               <div class="card-body">
                 <div class="row">
-                  <div class="col-3">
+                  <div class="col-6">
                     <p class="simple">
                       <span class="today">Today</span>
                       <br />
@@ -80,7 +83,7 @@
                       >
                     </p>
                   </div>
-                  <div class="col-9">
+                  <div class="col-6">
                     <span class="details">
                       <p class="now">
                         17°
@@ -91,9 +94,9 @@
                         <a href="#" id="fahrenheit-link">°F</a>
                       </p>
                       <ul style="list-style-type: none">
-                        <li id="max">High 20°</li>
-                        <li id="min">Low 10°</li>
-                        <li id="feeling">Feels like: 15°</li>
+                        <li id="max">High 20°C</li>
+                        <li id="min">Low 10°C</li>
+                        <li id="feeling">Feels like: 15°C</li>
                         <li id="humidity">Humidity: 67%</li>
                         <li id="wind">Wind: 7 mph</li>
                       </ul>
@@ -104,44 +107,6 @@
             </div>
           </span>
         </div>
-        <span class="future">
-          <div class="col-4">
-            <p class="five">Next 5 days:</p>
-            <hr />
-            <ul class="list" style="list-style-type: none">
-              <li>
-                Monday <br />
-                <i class="fas fa-cloud-showers-heavy"></i>
-                <br />
-                72°| 45°
-              </li>
-              <li>
-                Tuesday <br />
-                <i class="fas fa-cloud-rain"></i>
-                <br />
-                48°| 43°
-              </li>
-              <li>
-                Wednesday <br />
-                <i class="fas fa-cloud-rain"></i>
-                <br />
-                55°| 43°
-              </li>
-              <li>
-                Thursday <br />
-                <i class="far fa-sun sunny"></i>
-                <br />
-                64°| 46°
-              </li>
-              <li>
-                Friday <br />
-                <i class="far fa-sun sunny"></i>
-                <br />
-                63°| 45°
-              </li>
-            </ul>
-          </div>
-        </span>
       </div>
     </div>
     <script src="src/index.js"></script>

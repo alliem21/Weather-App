@@ -43,28 +43,32 @@ function displayWeatherCondition(response) {
     response.data.main.temp)}°`;
   document.querySelector("#humidity").innerHTML = `Humidity: ${response.data.main.humidity}%`;
   document.querySelector("#wind").innerHTML = `Wind: ${Math.round(
-    response.data.wind.speed)} mph`;
+    response.data.wind.speed)} km/h`;
   document.querySelector("#icon").setAttribute(
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   document.querySelector("#description").innerHTML = response.data.weather[0].description;
-  document.querySelector("#min").innerHTML = `Low ${Math.round(response.data.main.temp_min)}°`;
-  document.querySelector("#max").innerHTML = `High ${Math.round(response.data.main.temp_max)}°`;
-  document.querySelector("#feeling").innerHTML = `Feels like: ${Math.round(response.data.main.feels_like)}°`;
+  document.querySelector("#min").innerHTML = `Low ${Math.round(response.data.main.temp_min)}°C`;
+  document.querySelector("#max").innerHTML = `High ${Math.round(response.data.main.temp_max)}°C`;
+  document.querySelector("#feeling").innerHTML = `Feels like: ${Math.round(response.data.main.feels_like)}°C`;
   
   celsiusTemperature = response.data.main.temp;
 }
+
+
 
 function handleSubmit(event) {
   event.preventDefault();
   let city = document.querySelector("#city-entered").value;
   searchCity(city);
 }
+
 function searchCity(city) {
   let apiKey = "243e61ef7bf0666ad76f473c226e9936";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayWeatherCondition);
+
 }
 
 let form = document.querySelector(".form-inline");
@@ -74,6 +78,7 @@ function searchLocation(position) {
   let apiKey = "243e61ef7bf0666ad76f473c226e9936";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayWeatherCondition);
+ 
 }
 
 function submitCurrentLocation(event) {
@@ -84,6 +89,7 @@ let currentLocation = document.querySelector("#current-location");
 currentLocation.addEventListener("click", submitCurrentLocation);
 
 //temperature conversion
+
 function displayFahrenheitTemperature(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector(".now");
@@ -110,5 +116,8 @@ let celsiusTemperature = null;
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
 
+
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsiusTemperature);
+
+searchCity("Austin");
