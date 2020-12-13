@@ -84,3 +84,12 @@ li {
 .opensource {
   text-align: center;
 }
+
+.units .active {
+  color: black;
+  cursor: default;
+}
+
+.units .active:hover {
+  text-decoration: none;
+}
