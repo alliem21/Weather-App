@@ -41,6 +41,17 @@ function displayWeatherCondition(response) {
   document.querySelector(".city").innerHTML = response.data.name;
   document.querySelector(".now").innerHTML = `${Math.round(
     response.data.main.temp)}°`;
+  document.querySelector("#humidity").innerHTML = `Humidity: ${response.data.main.humidity}%`;
+  document.querySelector("#wind").innerHTML = `Wind: ${Math.round(
+    response.data.wind.speed)} mph`;
+  document.querySelector("#icon").setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  document.querySelector("#description").innerHTML = response.data.weather[0].description;
+  document.querySelector("#min").innerHTML = `Low ${Math.round(response.data.main.temp_min)}°`;
+  document.querySelector("#max").innerHTML = `High ${Math.round(response.data.main.temp_max)}°`;
+  document.querySelector("#feeling").innerHTML = `Feels like: ${Math.round(response.data.main.feels_like)}°`;
 }
 function handleSubmit(event) {
   event.preventDefault();
@@ -69,19 +80,4 @@ function submitCurrentLocation(event) {
 let currentLocation = document.querySelector("#current-location");
 currentLocation.addEventListener("click", submitCurrentLocation);
 
-// Changing degrees
-
- 
-function convertToFahrenheit(event) { 
-  event.preventDefault(); 
-  let temperatureElement = document.querySelector(".now");
-  temperatureElement.innerHTML = Math.round((now * 9)/5 + 32); 
-} 
-  
-
-let fahrenheitLink = document.querySelector("#fahrenheit-link");
-fahrenheitLink.addEventListener("click", convertToFahrenheit); 
-
-let celsiusLink = document.querySelector("#celsius-link"); 
-celsiusLink.addEventListener("click", convertToCelsius);
 
