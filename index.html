@@ -69,7 +69,11 @@
                     <p class="simple">
                       <span class="today">Today</span>
                       <br />
-                      <i class="far fa-sun"></i>
+                      <img
+                        src="https://ssl.gstatic.com/onebox/weather/64/sunny/png"
+                        alt="Clear"
+                        id="icon"
+                      />
                       <br />
                       Clear Skies
                     </p>
@@ -85,10 +89,11 @@
                         <a href="#" id="fahrenheit-link">°F</a>
                       </p>
                       <ul style="list-style-type: none">
-                        <li>High 81°, Low 70°</li>
-                        <li>Feels like: 77°</li>
-                        <li>Humidity: 67%</li>
-                        <li>Wind: 7 mph</li>
+                        <li id="max">High 81°</li>
+                        <li id="min">Low 70°</li>
+                        <li id="feeling">Feels like: 77°</li>
+                        <li id="humidity">Humidity: 67%</li>
+                        <li id="wing">Wind: 7 mph</li>
                         <li>Chance of Rain: 50%</li>
                       </ul>
                     </span>
